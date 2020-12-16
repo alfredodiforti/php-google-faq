@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/app.css">
 </head>
 <body>
+<!-- PHP DATA -->
  <?php
  $faqs = [
     [
@@ -40,16 +45,42 @@
     ],
  ]    
  ?>
- <header></header>
- <main>
+ <!-- END PHP DATA -->
+ <header>
+ <div class="top">
+  <div class="left">
+   <img src="./dist/img/google.svg" alt="google">
+   <h3>Privacy e Termini</h3>
+  </div>
+  <div class="right">
+  <i class="fas fa-bars"></i>
+  <button>Accedi</button>
+  </div>
+ </div>
+ <div class="bottom">
+ <ul>
+ <li>introduzione</li>
+ <li>norme sulla privacy</li>
+ <li>termini di servizio</li>
+ <li>tecnologie</li>
+ <li>Domande frequenti</li>
+ </ul>
+ </div>
+ 
+ 
+ 
+ </header>
+ <main class="container">
+
+
+ <!-- PHP -->
  <?php
  foreach ( $faqs as $faq => $section) { ?>
   <h2> <?php echo $section['answer']?></h2>
   <p><?php echo $section['text']?></p>
-
-
  <?php } ?>
- 
+ <!-- END PHP -->
+
  </main>
 
 
